@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Rijwan Mohmmad - Analyst Portfolio</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: #f0f4f8;
+    color: #333;
+    scroll-behavior: smooth;
+  }
+  header {
+    background: linear-gradient(135deg, #0052D4, #4364F7, #6FB1FC);
+    color: #fff;
+    padding: 60px 20px 40px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+  header h1 {
+    font-weight: 700;
+    font-size: 3rem;
+    margin: 0 0 10px;
+  }
+  header p {
+    font-weight: 400;
+    font-size: 1.25rem;
+    margin: 0;
+    opacity: 0.85;
+  }
+  nav {
+    margin-top: 25px;
+  }
+  nav a {
+    color: #cce1ff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  nav a:hover {
+    color: #fff;
+  }
+  main {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  section {
+    background: #fff;
+    margin-bottom: 40px;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgb(0 0 0 / 0.1);
+    transition: transform 0.3s ease;
+  }
+  section:hover {
+    transform: translateY(-5px);
+  }
+  h2 {
+    margin-top: 0;
+    font-weight: 700;
+    font-size: 2rem;
+    border-bottom: 3px solid #4364F7;
+    padding-bottom: 8px;
+    color: #0052D4;
+  }
+  p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  /* About Me */
+  #about p {
+    max-width: 700px;
+    margin: 15px 0 0;
+  }
+  /* Skills */
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+  }
+  .skill-item {
+    background: #4364F7;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 0 2px 10px rgb(67 100 247 / 0.3);
+    transition: background 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+  }
+  .skill-item:hover {
+    background: #0052D4;
+  }
+  /* Projects */
+  .projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 20px;
+  }
+  .project-card {
+    background: #eef4ff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgb(67 100 247 / 0.15);
+    transition: box-shadow 0.3s ease;
+  }
+  .project-card:hover {
+    box-shadow: 0 8px 30px rgb(67 100 247 / 0.4);
+  }
+  .project-card h3 {
+    margin-top: 0;
+    color: #0052D4;
+  }
+  .project-card p {
+    margin: 10px 0 12px;
+    font-size: 1rem;
+    color: #444;
+  }
+  .project-card a {
+    color: #4364F7;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .project-card a:hover {
+    text-decoration: underline;
+  }
+  /* Experience */
+  .experience-list {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+  .job-card {
+    background: #eef4ff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgb(67 100 247 / 0.15);
+    transition: box-shadow 0.3s ease;
+  }
+  .job-card:hover {
+    box-shadow: 0 8px 30px rgb(67 100 247 / 0.4);
+  }
+  .job-card h3 {
+    margin-bottom: 5px;
+    color: #0052D4;
+  }
+  .job-card p {
+    margin: 0 0 10px;
+    font-style: italic;
+    color: #333;
+  }
+  .job-card ul {
+    margin: 0;
+    padding-left: 20px;
+    list-style: disc;
+    color: #555;
+  }
+  /* Contact */
+  #contact p {
+    font-size: 1.1rem;
+    margin: 8px 0;
+  }
+  #contact a {
+    color: #4364F7;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  #contact a:hover {
+    text-decoration: underline;
+  }
+  /* Footer */
+  footer {
+    background: #35424a;
+    color: #cfd6e3;
+    text-align: center;
+    padding: 18px 10px;
+    font-size: 0.9rem;
+    user-select: none;
+  }
+  /* Responsive */
+  @media (max-width: 720px) {
+    .skills-list {
+      justify-content: center;
+    }
+    main {
+      margin: 20px auto;
+      padding: 0 10px;
+    }
+    section {
+      padding: 20px 15px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Rijwan Mohmmad</h1>
+  <p>Data Analyst | Business Intelligence Enthusiast</p>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+    <a href="skills.html" style="margin-left: 30px; font-weight:bold; color:#ffe;">All Skills</a>
+  </nav>
+</header>
+
+<main>
+
+  <section id="about" aria-label="About Me">
+    <h2>About Me</h2>
+    <p>
+      Results-driven professional transitioning into an Analyst role with a strong foundation in data management, analytics, and business intelligence. Experienced in leveraging SQL, Python, Power BI, Tableau, and Excel to analyze data, generate insights, and optimize processes. Adept at stakeholder communication and problem-solving to drive data-driven decision-making.
+    </p>
+  </section>
+
+  <section id="skills" aria-label="Technical Skills">
+    <h2>Skills</h2>
+    <div class="skills-list">
+      <a href="skills.html#data-management" class="skill-item" title="Data Management & Analysis: Statistics, Agile Methodology, Salesforce, Excel (VLOOKUP, Pivot Tables)">Data Management & Analysis</a>
+      <a href="skills.html#business-intelligence" class="skill-item" title="Business Intelligence & Visualization: Tableau, Power BI (DAX, Insight Generation)">Business Intelligence & Visualization</a>
+      <a href="skills.html#database-management" class="skill-item" title="Database Management: SQL (DDL, DML, Joins, CTEs, Window Functions)">Database Management</a>
+      <a href="skills.html#programming" class="skill-item" title="Programming & Data Processing: Python (Functions, OOP, NumPy, Pandas, Matplotlib, Seaborn, Plotly)">Programming & Data Processing</a>
+      <a href="skills.html#ai-tools" class="skill-item" title="AI Tools & Assistants: ChatGPT, Gemini, Copilot, Ideogram, Perplexity, Gamma, Notion, RunwayML">AI Tools & Assistants</a>
+      <a href="skills.html#soft-skills" class="skill-item" title="Soft Skills: Stakeholder Communication, Problem-Solving, Critical Thinking, Team Collaboration">Soft Skills</a>
+    </div>
+  </section>
+
+  <section id="projects" aria-label="Projects">
+    <h2>Projects</h2>
+    <div class="projects-list">
+      <div class="project-card">
+        <h3>HR Analytics Dashboard</h3>
+        <p>Designed an interactive HR Analytics Dashboard visualizing attrition rates, salary distribution, and workforce trends.</p>
+        <a href="https://github.com/MrRijwan/HR-analysis-power-bi-dashboard" target="_blank" rel="noopener">View Project</a>
+      </div>
+      <div class="project-card">
+        <h3>Patient Outcomes and Claims Insights Dashboard</h3>
+        <p>Developed a Power BI dashboard analyzing 105K patients and $524M in claims to uncover trends in recovery rates, diagnoses, and costs.</p>
+        <a href="https://github.com/MrRijwan/Patient-Outcomes-and-Claims-Insights" target="_blank" rel="noopener">View Project</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" aria-label="Professional Experience">
+    <h2>Experience</h2>
+    <div class="experience-list">
+      <article class="job-card">
+        <h3>Brand Champion</h3>
+        <p>Ola Electric, Bhilwara, Rajasthan (Nov 2022 – Dec 2024)</p>
+        <ul>
+          <li>Managed and analyzed sales data using Salesforce & Excel, identifying key trends and optimizing customer engagement strategies.</li>
+          <li>Achieved a 30% boost in sales conversions through targeted data analysis and insights.</li>
+        </ul>
+      </article>
+      <article class="job-card">
+        <h3>Senior Sales Executive</h3>
+        <p>Hind Electrical and Hardware, Bhilwara, Rajasthan (Sep 2017 - Oct 2022)</p>
+        <ul>
+          <li>Increased overall sales by 20% YoY through customer engagement and product knowledge.</li>
+          <li>Played a key role in expanding the customer base.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section id="contact" aria-label="Contact Information">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:rijwanmohmmad99@gmail.com">rijwanmohmmad99@gmail.com</a></p>
+    <p>Phone: +91 9571769398</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/rijwan786" target="_blank" rel="noopener">linkedin.com/in/rijwan786</a></p>
+    <p>GitHub: <a href="https://github.com/dashboard" target="_blank" rel="noopener">github.com/dashboard</a></p>
+  </section>
+
+</main>
+
+<footer>
+  &copy; 2023 Rijwan Mohmmad. All rights reserved.
+</footer>
+
+</body>
+</html>
+
